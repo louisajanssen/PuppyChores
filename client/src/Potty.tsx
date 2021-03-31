@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Dropdown, IDropdownStyles, IStackTokens, IDropdownOption, Stack, DefaultPalette, IStackStyles, Text, IStackItemStyles} from '@fluentui/react';
+import { Icon } from '@fluentui/react/lib/Icon';
 
 const dropdownStyles: Partial<IDropdownStyles> = {
   dropdown: { width: 300 },
@@ -44,6 +45,7 @@ const selectWeekStyles = {
 const textStyles = {
   padding:10
 }
+
 
 const stackTokens: IStackTokens = {
   childrenGap: 10,
@@ -102,25 +104,32 @@ const stackTokens: IStackTokens = {
               </Stack>
               <Stack horizontal styles={stackStyles} tokens={stackTokens}>
                 <Stack.Item grow={2} styles={stackItemStyles}>
-                  Grow is 2
+                  <Icon style={textStyles} iconName="CirclePlus" />
+                  <Text variant="smallPlus">Add Potty Moment</Text>
                 </Stack.Item>
                 <Stack.Item grow={2} styles={stackItemStyles}>
-                  Grow is 2
+                  <Icon style={textStyles} iconName="CirclePlus" />
+                  <Text variant="smallPlus">Add Potty Moment</Text>
                 </Stack.Item>
                 <Stack.Item grow={2} styles={stackItemStyles}>
-                  Grow is 2
+                  <Icon style={textStyles} iconName="CirclePlus" />
+                  <Text variant="smallPlus">Add Potty Moment</Text>
                 </Stack.Item>
                 <Stack.Item grow={2} styles={stackItemStyles}>
-                  Grow is 2
+                  <Icon style={textStyles} iconName="CirclePlus" />
+                  <Text variant="smallPlus">Add Potty Moment</Text>
                 </Stack.Item>
                 <Stack.Item grow={2} styles={stackItemStyles}>
-                  Grow is 2
+                  <Icon style={textStyles} iconName="CirclePlus" />
+                  <Text variant="smallPlus">Add Potty Moment</Text>
                 </Stack.Item>
                 <Stack.Item grow={2} styles={stackItemStyles}>
-                  Grow is 2
+                  <Icon style={textStyles} iconName="CirclePlus" />
+                  <Text variant="smallPlus">Add Potty Moment</Text>
                 </Stack.Item>
                 <Stack.Item grow={2} styles={stackItemStyles}>
-                  Grow is 2
+                  <Icon style={textStyles} iconName="CirclePlus" />
+                  <Text variant="smallPlus">Add Potty Moment</Text>
                 </Stack.Item>
               </Stack>
             </div>
