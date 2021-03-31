@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/louisajanssen/PuppyChores#readme",
   "dependencies": {
-    "antd": "^4.15.0",
+    "@fluentui/react": "^8.7.1",
     "axios": "^0.21.1",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
@@ -35,8 +35,8 @@
     "@types/react-dom": "^17.0.3",
     "css-loader": "^5.2.0",
     "nodemon": "^2.0.7",
-    "ts-loader": "^8.1.0",
     "style-loader": "^2.0.0",
+    "ts-loader": "^8.1.0",
     "typescript": "^4.2.3",
     "webpack": "^5.28.0",
     "webpack-cli": "^4.6.0"
