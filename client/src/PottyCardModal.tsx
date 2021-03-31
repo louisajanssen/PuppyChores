@@ -28,7 +28,7 @@ const stackStyles: IStackStyles = {
   const theme = getTheme();
 
   const mainDivStyles = {
-    boxShadow: theme.effects.elevation64,
+    boxShadow: theme.effects.elevation8,
     width: 600,
     padding: 25,
     align: 'center'
@@ -53,7 +53,7 @@ const stackStyles: IStackStyles = {
     padding: 10,
   };
   
-  export const PottyCard: React.FC = () => {
+  export const PottyCardModal: React.FC = () => {
 
     const optionsDrop: IDropdownOption[] = [
         { key: 'One', text: 'I went Number 1!'},
@@ -99,44 +99,7 @@ const stackStyles: IStackStyles = {
                     <Toggle onText="Oops! This was an accident." offText="This was not an accident."/>
                 </Stack.Item>
                 <Stack.Item grow={2} styles={stackItemStyles}>
-                    <img src="https://img.icons8.com/android/24/000000/edit.png"/>
-                </Stack.Item>
-            </Stack>
-            </div>
-        </Stack.Item>
-        </Stack>
-
-        <Stack styles={stackStyles} tokens={itemAlignmentsStackTokens}>
-        <Stack.Item align="center" styles={mainStackItemStyles}>
-            <div style={mainDivStyles}>
-            <Stack horizontal styles={stackStyles} tokens={stackTokens}>
-                <Stack.Item grow={2} styles={stackItemStyles}>
-                    <img src="https://img.icons8.com/ios/50/000000/dog-pooping.png"/>
-                </Stack.Item>
-                <Stack.Item grow={2} styles={stackItemStyles}>
-                    <Dropdown
-                    placeholder="I went Number 2!"
-                    styles={dropdownStyles}
-                    options={optionsDrop}
-                    />
-                </Stack.Item>
-                <Stack.Item grow={2} styles={stackItemStyles}>
-                    <Text variant="medium">at</Text>
-                </Stack.Item>
-                <Stack.Item grow={2} styles={stackItemStyles}>
-                    <Day />
-                </Stack.Item>
-            </Stack>
-            <div style={divStyles}>
-                <ChoiceGroup defaultSelectedKey="B" options={options} label="Amount"/>
-                <TextField label="Notes"></TextField>
-            </div>
-            <Stack horizontal styles={stackStyles} tokens={stackTokens}>
-                <Stack.Item grow={2} styles={stackItemStyles}>
-                    <Toggle onText="Oops! This was an accident." offText="This was not an accident."/>
-                </Stack.Item>
-                <Stack.Item grow={2} styles={stackItemStyles}>
-                    <img src="https://img.icons8.com/android/24/000000/edit.png"/>
+                    <img src="https://img.icons8.com/metro/26/000000/save.png"/>
                 </Stack.Item>
             </Stack>
             </div>

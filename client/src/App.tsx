@@ -3,7 +3,7 @@ import { Navbar } from "./Navbar";
 import { GeneralInfo } from "./GeneralInfo";
 import { Health } from "./Health";
 import { Chow } from "./Chow";
-import { Potty2 } from "./Potty2";
+import { Potty } from "./Potty";
   
 export const App: React.FC = () => {
     const [renderPage, setRenderPage] = React.useState('Info')
@@ -53,7 +53,7 @@ export const App: React.FC = () => {
     return (
         <div>
             <Navbar onGeneralInfoClicked={onGeneralInfoClicked} onHealthClicked={onHealthClicked} onChowClicked={onChowClicked} onPottyClicked={onPottyClicked}/>
-            <Potty2/>
+            <Potty/>
         </div>
     );
   }
