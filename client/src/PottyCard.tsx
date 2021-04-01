@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Day } from './Date'
-import { Dropdown, IDropdownOption, IDropdownStyles, ChoiceGroup, IChoiceGroupOption, TextField, Toggle, Text, DefaultPalette, Stack, IStackStyles, IStackTokens, IStackItemStyles, getTheme } from '@fluentui/react';
+import { Dropdown, IDropdownOption, IDropdownStyles, ChoiceGroup, IChoiceGroupOption, TextField, Toggle, Text, DefaultPalette, Stack, IStackStyles, IStackTokens, IStackItemStyles, getTheme, Icon } from '@fluentui/react';
 
 // Styles definition
 const stackStyles: IStackStyles = {
@@ -52,6 +52,16 @@ const stackStyles: IStackStyles = {
     childrenGap: 5,
     padding: 10,
   };
+
+  const textStyles = {
+    color: "#565656",
+    paddingLeft: 20
+  }
+  const text2Styles = {
+    color: "#565656",
+    paddingLeft: 20,
+    paddingTop: 20
+  }
   
   export const PottyCard: React.FC = () => {
 
@@ -69,6 +79,8 @@ const stackStyles: IStackStyles = {
   
     return (
       <div>
+        <Text style={text2Styles} variant="small">Today, 04/01/2021</Text>
+        <hr />
         <Stack styles={stackStyles} tokens={itemAlignmentsStackTokens}>
         <Stack.Item align="center" styles={mainStackItemStyles}>
             <div style={mainDivStyles}>
@@ -84,7 +96,7 @@ const stackStyles: IStackStyles = {
                     />
                 </Stack.Item>
                 <Stack.Item grow={2} styles={stackItemStyles}>
-                    <Text variant="medium">at</Text>
+                    <Text variant="medium">on</Text>
                 </Stack.Item>
                 <Stack.Item grow={2} styles={stackItemStyles}>
                     <Day />
@@ -99,13 +111,14 @@ const stackStyles: IStackStyles = {
                     <Toggle onText="Oops! This was an accident." offText="This was not an accident."/>
                 </Stack.Item>
                 <Stack.Item grow={2} styles={stackItemStyles}>
-                    <img src="https://img.icons8.com/android/24/000000/edit.png"/>
+                  <Icon iconName="Edit"/>
                 </Stack.Item>
             </Stack>
             </div>
         </Stack.Item>
         </Stack>
-
+        <Text style={textStyles} variant="small">Yesterday, 03/31/2021</Text>
+        <hr />
         <Stack styles={stackStyles} tokens={itemAlignmentsStackTokens}>
         <Stack.Item align="center" styles={mainStackItemStyles}>
             <div style={mainDivStyles}>
@@ -121,7 +134,7 @@ const stackStyles: IStackStyles = {
                     />
                 </Stack.Item>
                 <Stack.Item grow={2} styles={stackItemStyles}>
-                    <Text variant="medium">at</Text>
+                    <Text variant="medium">on</Text>
                 </Stack.Item>
                 <Stack.Item grow={2} styles={stackItemStyles}>
                     <Day />
@@ -136,7 +149,44 @@ const stackStyles: IStackStyles = {
                     <Toggle onText="Oops! This was an accident." offText="This was not an accident."/>
                 </Stack.Item>
                 <Stack.Item grow={2} styles={stackItemStyles}>
-                    <img src="https://img.icons8.com/android/24/000000/edit.png"/>
+                  <Icon iconName="Edit"/>
+                </Stack.Item>
+            </Stack>
+            </div>
+        </Stack.Item>
+        </Stack>
+
+        <Stack styles={stackStyles} tokens={itemAlignmentsStackTokens}>
+        <Stack.Item align="center" styles={mainStackItemStyles}>
+            <div style={mainDivStyles}>
+            <Stack horizontal styles={stackStyles} tokens={stackTokens}>
+                <Stack.Item grow={2} styles={stackItemStyles}>
+                    <img src="https://img.icons8.com/ios/50/000000/dog-pee.png"/>
+                </Stack.Item>
+                <Stack.Item grow={2} styles={stackItemStyles}>
+                    <Dropdown
+                    placeholder="I went Number 1!"
+                    styles={dropdownStyles}
+                    options={optionsDrop}
+                    />
+                </Stack.Item>
+                <Stack.Item grow={2} styles={stackItemStyles}>
+                    <Text variant="medium">on</Text>
+                </Stack.Item>
+                <Stack.Item grow={2} styles={stackItemStyles}>
+                    <Day />
+                </Stack.Item>
+            </Stack>
+            <div style={divStyles}>
+                <ChoiceGroup defaultSelectedKey="A" options={options} label="Amount"/>
+                <TextField label="Notes"></TextField>
+            </div>
+            <Stack horizontal styles={stackStyles} tokens={stackTokens}>
+                <Stack.Item grow={2} styles={stackItemStyles}>
+                    <Toggle onText="Oops! This was an accident." offText="This was not an accident."/>
+                </Stack.Item>
+                <Stack.Item grow={2} styles={stackItemStyles}>
+                  <Icon iconName="Edit"/>
                 </Stack.Item>
             </Stack>
             </div>

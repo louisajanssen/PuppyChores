@@ -7,6 +7,7 @@ interface IProps {
     onChowClicked: () => void
     onPottyClicked: () => void
     }
+ 
 
 export const Navbar: React.FC<IProps> = ({ onGeneralInfoClicked, onHealthClicked, onChowClicked, onPottyClicked }: IProps) => {
 
@@ -49,13 +50,16 @@ export const Navbar: React.FC<IProps> = ({ onGeneralInfoClicked, onHealthClicked
     ];
 
     return (
-        <div>
+      <div style={{ display: 'flex', width: '100%', cursor: 'pointer'}}>
+        <img style={{ paddingRight: '10px', }} width="50" src="../images/dog.png"></img>
+        <div style={{ flexGrow: 1 }}>
           <CommandBar
             items={_items}
             farItems={_farItems}
             ariaLabel="Use left and right arrow keys to navigate between commands"
           />
         </div>
+      </div>
       );
     };
     

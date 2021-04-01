@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Day } from './Date'
-import { Dropdown, IDropdownOption, IDropdownStyles, ChoiceGroup, IChoiceGroupOption, TextField, Toggle, Text, DefaultPalette, Stack, IStackStyles, IStackTokens, IStackItemStyles, getTheme } from '@fluentui/react';
+import { Icon, Dropdown, IDropdownOption, IDropdownStyles, ChoiceGroup, IChoiceGroupOption, TextField, Toggle, Text, DefaultPalette, Stack, IStackStyles, IStackTokens, IStackItemStyles, getTheme } from '@fluentui/react';
 
 // Styles definition
 const stackStyles: IStackStyles = {
@@ -99,7 +99,7 @@ const stackStyles: IStackStyles = {
                     <Toggle onText="Oops! This was an accident." offText="This was not an accident."/>
                 </Stack.Item>
                 <Stack.Item grow={2} styles={stackItemStyles}>
-                    <img src="https://img.icons8.com/metro/26/000000/save.png"/>
+                  <Icon style={{width: '50px'}} iconName="Save"/>
                 </Stack.Item>
             </Stack>
             </div>

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { DatePicker, IDatePickerStrings, mergeStyleSets} from '@fluentui/react';
+import { DatePicker, IDatePickerStrings } from '@fluentui/react';
 
 const DayPickerStrings: IDatePickerStrings = {
     months: [
@@ -33,12 +33,12 @@ const DayPickerStrings: IDatePickerStrings = {
     yearPickerHeaderAriaLabel: '{0}, select to change the month',
   };
   
-  const controlClass = mergeStyleSets({
-    control: {
-      margin: '0 0 15px 0',
-      maxWidth: '300px',
-    },
-  });
+  // const controlClass = mergeStyleSets({
+  //   control: {
+  //     margin: '0 0 15px 0',
+  //     maxWidth: '300px',
+  //   },
+  // });
   
   export const Day: React.FC = () => {
   
@@ -46,9 +46,9 @@ const DayPickerStrings: IDatePickerStrings = {
     return (
       <div>
         <DatePicker
-          className={controlClass.control}
+          // className={controlClass.control}
           strings={DayPickerStrings}
-          placeholder="Select a date..."
+          placeholder="Thu Apr 01 2021"
           ariaLabel="Select a date"
         />
       </div>
