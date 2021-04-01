@@ -1,41 +1,35 @@
 import * as React from "react";
-import { Dropdown, IDropdownStyles, IStackTokens, IDropdownOption, Stack, DefaultPalette, IStackStyles, Text, IStackItemStyles} from '@fluentui/react';
+import { ChowDay} from './ChowDay'
+import { Dropdown, IDropdownStyles, IDropdownOption, Stack, Text, IStackItemStyles, IStackStyles, IStackTokens} from '@fluentui/react';
+import { ChowToggle } from "./ChowToggle";
+import { ChowNotes } from "./ChowNotes";
+
+// const theme = getTheme();
+
 
 const dropdownStyles: Partial<IDropdownStyles> = {
   dropdown: { width: 300},
 };
 
-const stackStyles: IStackStyles = {
-  root: {
-    background: DefaultPalette.white,
-  },
-};
-
 const stackItemStyles: IStackItemStyles = {
   root: {
-    alignItems: 'center',
-    background: '#c8c6c4',
-    color: DefaultPalette.white,
-    display: 'flex',
-    height: 400,
-    justifyContent: 'center',
+    background: 'white',
+    color: 'black',
+    padding: 5,
   },
 };
-
-const stackItemDateStyles: IStackItemStyles = {
+const itemAlignmentsStackStyles: IStackStyles = {
   root: {
-    alignItems: 'center',
-    background: DefaultPalette.white,
-    color: DefaultPalette.black,
-    display: 'flex',
-    height: 10,
-    justifyContent: 'center',
+    background: 'white',
+    height: 100
   },
 };
 
-const divStyles = {
-  paddingTop: 20
-}
+const itemAlignmentsStackTokens: IStackTokens = {
+  childrenGap: 5,
+  padding: 10,
+};
+
 
 const selectWeekStyles = {
   paddingLeft: 30
@@ -44,11 +38,11 @@ const selectWeekStyles = {
 const textStyles = {
   padding:10
 }
+// const mainDivStyles = {
+//   boxShadow: theme.effects.elevation64,
+//   width: '100%'
+// }
 
-const stackTokens: IStackTokens = {
-  childrenGap: 10,
-  padding: 10,
-};
   
   export const Chow = () => {
     const [weekRender, setWeekRender] = React.useState('')
@@ -76,54 +70,29 @@ const stackTokens: IStackTokens = {
                   styles={dropdownStyles}
                 />
             </div>
-            <div style={divStyles}>
-              <Stack horizontal styles={stackStyles} tokens={stackTokens}>
-                <Stack.Item grow={2} styles={stackItemDateStyles}>
-                  <Text variant="medium">MON</Text>
-                </Stack.Item>
-                <Stack.Item grow={2} styles={stackItemDateStyles}>
-                  <Text variant="medium">TUE</Text>
-                </Stack.Item>
-                <Stack.Item grow={2} styles={stackItemDateStyles}>
-                  <Text variant="medium">WED</Text>
-                </Stack.Item>
-                <Stack.Item grow={2} styles={stackItemDateStyles}>
-                  <Text variant="medium">THUR</Text>
-                </Stack.Item>
-                <Stack.Item grow={2} styles={stackItemDateStyles}>
-                  <Text variant="medium">FRI</Text>
-                </Stack.Item>
-                <Stack.Item grow={2} styles={stackItemDateStyles}>
-                  <Text variant="medium">SAT</Text>
-                </Stack.Item>
-                <Stack.Item grow={2} styles={stackItemDateStyles}>
-                  <Text variant="medium">SUN</Text>
-                </Stack.Item>
-              </Stack>
-              <Stack horizontal styles={stackStyles} tokens={stackTokens}>
-                <Stack.Item grow={2} styles={stackItemStyles}>
-                  Grow is 2
-                </Stack.Item>
-                <Stack.Item grow={2} styles={stackItemStyles}>
-                  Grow is 2
-                </Stack.Item>
-                <Stack.Item grow={2} styles={stackItemStyles}>
-                  Grow is 2
-                </Stack.Item>
-                <Stack.Item grow={2} styles={stackItemStyles}>
-                  Grow is 2
-                </Stack.Item>
-                <Stack.Item grow={2} styles={stackItemStyles}>
-                  Grow is 2
-                </Stack.Item>
-                <Stack.Item grow={2} styles={stackItemStyles}>
-                  Grow is 2
-                </Stack.Item>
-                <Stack.Item grow={2} styles={stackItemStyles}>
-                  Grow is 2
-                </Stack.Item>
-              </Stack>
-            </div>
+            <Stack>
+            <Stack.Item align="center">
+              <div style={{paddingTop: '30px'}}>
+                <Stack horizontal disableShrink styles={itemAlignmentsStackStyles} tokens={itemAlignmentsStackTokens}>
+                    <Stack.Item align="auto" styles={stackItemStyles}>
+                      <ChowDay />
+                    </Stack.Item>
+                    <Stack.Item align="auto" styles={stackItemStyles}>
+                    <Text style ={{ paddingLeft: '12px', fontWeight: 'bold'}} variant="large">AM</Text>
+                      <ChowToggle />
+                    </Stack.Item>
+                    <Stack.Item align="auto" styles={stackItemStyles}>
+                      <Text style ={{ paddingLeft: '12px', fontWeight: 'bold'}} variant="large">PM</Text>
+                      <ChowToggle />
+                    </Stack.Item>
+                    <Stack.Item align="auto" styles={stackItemStyles}>
+                    <Text style ={{ paddingLeft: '12px', fontWeight: 'bold'}} variant="large">Notes</Text>
+                      <ChowNotes />
+                    </Stack.Item>
+                </Stack>
+              </div>
+            </Stack.Item>       
+            </Stack>
         </div>
       );
     }

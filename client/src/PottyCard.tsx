@@ -146,7 +146,7 @@ const stackStyles: IStackStyles = {
             </div>
             <Stack horizontal styles={stackStyles} tokens={stackTokens}>
                 <Stack.Item grow={2} styles={stackItemStyles}>
-                    <Toggle onText="Oops! This was an accident." offText="This was not an accident."/>
+                  <Toggle onText="Oops! This was an accident." offText="This was not an accident."/>
                 </Stack.Item>
                 <Stack.Item grow={2} styles={stackItemStyles}>
                   <Icon iconName="Edit"/>
