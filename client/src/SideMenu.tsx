@@ -23,5 +23,5 @@ export const Sidemenu: React.FunctionComponent = () => {
         },
       ],
     }));
-    return <span style={{paddingTop: '8px'}}><DefaultButton style={{ background:'#d8d8d8' }}text="Hi there, Miko!" menuProps={menuProps} /></span>;
+    return <span style={{paddingTop: '8px', paddingRight: '10px'}}><DefaultButton style={{ background:'#d8d8d8' }}text="Hi there, Miko!" menuProps={menuProps} /></span>;
   };

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { TextField, getTheme, Stack, IStackStyles, IStackTokens, IStackItemStyles, DefaultPalette, Text, Toggle, Icon } from '@fluentui/react';
+import { TextField, getTheme, Stack, IStackStyles, IStackTokens, IStackItemStyles, DefaultPalette, Text, Toggle, DefaultButton, IIconProps } from '@fluentui/react';
 
 const theme = getTheme();
 
@@ -37,6 +37,7 @@ const nextDivStyles = {
   width: 300,
   align: 'center'
 }
+const editIcon: IIconProps = {iconName: 'Edit'}
   
   export const NextDue: React.FC = () => {
   
@@ -46,9 +47,6 @@ const nextDivStyles = {
             <div style={nextDivStyles}>
               <Stack.Item align="center" grow={2} styles={stackItemStyles}>
                 <Text variant="xLarge">NEXT DUE</Text>
-                <span style={{ paddingLeft: '5px'}}>
-                    <Icon iconName="Edit"/>
-                </span>
               </Stack.Item>
               <TextField label="Rabies:" placeholder="02/13/2022"/>
               <TextField label="Bordetella:" placeholder="10/25/2021"/>
@@ -59,6 +57,13 @@ const nextDivStyles = {
                       <Toggle onText="Pause reminders." offText="Set reminders."/>
                   </Stack.Item>
                 </p>
+                <p style={{paddingTop: '10px', paddingLeft: '10px'}}>
+                <Stack.Item grow={2} styles={stackItemStyles}>
+                <DefaultButton
+                  text="Edit"
+                  iconProps={editIcon} />
+                </Stack.Item>
+              </p>
               </Stack>
             </div>
           </Stack.Item>

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { CommandBar, ICommandBarItemProps } from '@fluentui/react';
+import { CommandBar, ICommandBarItemProps, Text } from '@fluentui/react';
 import { Sidemenu } from './SideMenu';
 
 interface IProps {
@@ -13,51 +13,38 @@ interface IProps {
 export const Navbar: React.FC<IProps> = ({ onGeneralInfoClicked, onHealthClicked, onChowClicked, onPottyClicked }: IProps) => {
 
     const _items: ICommandBarItemProps[] = [
-      {
-        key: 'puppy',
-        text: 'PUPPY CHORES',
-        style: {background: '#d8d8d8'}
-      },
 
       {
         key: 'generalInfo',
         text: 'General Info',
         onClick: onGeneralInfoClicked,
-        style: {background: '#d8d8d8'}
+        style: {background: '#d8d8d8', paddingTop: '10px'}
       },
       {
         key: 'health',
-        text: 'Puppys Health',
+        text: "Puppy's Health",
         onClick: onHealthClicked,
-        style: {background: '#d8d8d8'}
+        style: {background: '#d8d8d8', paddingTop: '10px'}
       },
       {
         key: 'chow',
         text: 'Chow Time',
         onClick: onChowClicked,
-        style: {background: '#d8d8d8'}
+        style: {background: '#d8d8d8', paddingTop: '10px'}
       },
       {
         key: 'potty',
         text: 'Potty Tracker',
         onClick: onPottyClicked,
-        style: {background: '#d8d8d8'}
+        style: {background: '#d8d8d8', paddingTop: '10px'}
       },
     ];
-    
-    
-    // const _farItems: ICommandBarItemProps[] = [
-    //   {
-    //     key: 'info',
-    //     text: 'Info',
-    //     // This needs an ariaLabel since it's icon-only
-    //     ariaLabel: 'Info',
-    //   },
-    // ];
+  
 
     return (
       <div style={{ display: 'flex', width: '100%', height: '50px', cursor: 'pointer', backgroundColor: '#d8d8d8'}}>
-        <img style={{ paddingRight: '10px', }} width="50" src="../images/dog.png"></img>
+        <img style={{ paddingLeft: '10px' }} width="50" src="../images/dog.png"></img>
+        <Text style={{paddingTop: '15px', paddingLeft: '10px', fontWeight: 'bold'}}variant="mediumPlus">PUPPY CHORES</Text>
         <div style={{ flexGrow: 1 }}>
           <CommandBar
             styles={{root: {background: '#d8d8d8'}}}

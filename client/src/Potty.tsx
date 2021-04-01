@@ -25,6 +25,19 @@ const stackItemStyles: IStackItemStyles = {
     padding: 10
   },
 };
+const stackItemWeekStyles: IStackItemStyles = {
+  root: {
+    alignItems: 'left',
+    background: 'white',
+    color: DefaultPalette.white,
+    display: 'flex',
+    height: 50,
+    justifyContent: 'left',
+    paddingTop: 10,
+    paddingBottom: 10,
+    paddingRight: 10
+  },
+};
 
 // const stackItemDateStyles: IStackItemStyles = {
 //   root: {
@@ -45,12 +58,19 @@ const selectWeekStyles = {
   paddingLeft: 30
 }
 
-const textStyles = {
-  padding:10
+const textWeekStyles = {
+  padding: 10
+}
+const textDropStyles = {
+  paddingRight: 10,
+  paddingTop: 10,
+  paddingBottom: 5,
+  paddingLeft: 20
 }
 
+
 const spanStyle = {
-  paddingLeft: 550
+  paddingLeft: 650
 }
 
 
@@ -58,6 +78,11 @@ const stackTokens: IStackTokens = {
   childrenGap: 10,
   padding: 10,
 };
+
+const chowTextStyles = {
+  paddingLeft: 20,
+  paddingTop: 30,
+}
 
 const cancelIcon: IIconProps = { iconName: 'Cancel' };
   
@@ -80,7 +105,7 @@ const cancelIcon: IIconProps = { iconName: 'Cancel' };
       return (
         <div>
             <div style={selectWeekStyles}>
-              <Text style={textStyles} variant="large">Week 03/28/2021 to 04/03/2021</Text>
+              <Text style={chowTextStyles} variant="xLarge">POTTY TRACKER</Text>
               <Stack styles={stackStyles} tokens={stackTokens}>
                 <Stack.Item styles={stackItemStyles}>
                   <Dropdown
@@ -94,6 +119,9 @@ const cancelIcon: IIconProps = { iconName: 'Cancel' };
                     <DefaultButton styles={iconButtonStyles} onClick={showModal} text="Add Potty Moment" />
                   </span>
                 </Stack.Item>
+                <Stack.Item styles={stackItemWeekStyles}>
+                  <Text style={textWeekStyles} variant="large">Week 03/28/2021 to 04/03/2021</Text>
+                </Stack.Item>
               </Stack>
             </div>
             <PottyCard />
@@ -105,7 +133,7 @@ const cancelIcon: IIconProps = { iconName: 'Cancel' };
                 containerClassName={contentStyles.container}
               >
                 <div className={contentStyles.header}>
-                  <span>Add Potty Moment</span>
+                  <span style={{paddingLeft: '20px'}}>Add Potty Moment</span>
                   <IconButton
                     styles={iconButtonStyles}
                     iconProps={cancelIcon}
@@ -125,8 +153,8 @@ const cancelIcon: IIconProps = { iconName: 'Cancel' };
     else {
       return (
         <div style={selectWeekStyles}>
-            <Text style={textStyles} variant="xLarge">POTTY TRACKER</Text>
-            <Stack style={textStyles}>
+            <Text style={chowTextStyles} variant="xLarge">POTTY TRACKER</Text>
+            <p style={textDropStyles}>
               <Dropdown
                 placeholder="Select an option"
                 label="Select Week"
@@ -134,7 +162,7 @@ const cancelIcon: IIconProps = { iconName: 'Cancel' };
                 styles={dropdownStyles}
                 onChange={onWeekClick}
               />
-            </Stack>
+            </p>
         </div>
       );
     }

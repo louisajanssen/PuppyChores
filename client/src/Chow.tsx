@@ -1,6 +1,6 @@
 import * as React from "react";
 import { ChowDay} from './ChowDay'
-import { Dropdown, IDropdownStyles, IDropdownOption, Stack, Text, IStackItemStyles, IStackStyles, IStackTokens} from '@fluentui/react';
+import { Icon, Dropdown, IDropdownStyles, IDropdownOption, Stack, Text, IStackItemStyles, IStackStyles, IStackTokens} from '@fluentui/react';
 import { ChowToggle } from "./ChowToggle";
 import { ChowNotes } from "./ChowNotes";
 
@@ -36,7 +36,13 @@ const selectWeekStyles = {
 }
 
 const textStyles = {
-  padding:10
+  paddingLeft: 10,
+  paddingBottom: 5
+}
+
+const chowTextStyles = {
+  paddingLeft: 10,
+  paddingTop: 30,
 }
 // const mainDivStyles = {
 //   boxShadow: theme.effects.elevation64,
@@ -46,6 +52,7 @@ const textStyles = {
   
   export const Chow = () => {
     const [weekRender, setWeekRender] = React.useState('')
+    const [saveRender, setSaveRender] = React.useState(false)
   
   
     const options: IDropdownOption[] = [
@@ -56,19 +63,31 @@ const textStyles = {
     const onWeekClick = () => {
       setWeekRender('Week1')
     }
+
+    const renderSave = () => {
+      if (saveRender === true) {
+        return <span style={{paddingLeft: '10px'}}><Icon onClick={() => setSaveRender(false)} iconName="save" /></span>
+      }
+      else {
+        return
+      }
+    }
   
 
     if(weekRender === 'Week1') {
       return (
         <div>
             <div style={selectWeekStyles}>
-              <Text style={textStyles} variant="large">Week 03/28/2021 to 04/03/2021</Text>
+              <Text style={chowTextStyles} variant="xLarge">CHOW TIME</Text>
+              <p style={textStyles}>
                 <Dropdown
                   placeholder="Select an option"
                   label="Select Week"
                   options={options}
                   styles={dropdownStyles}
                 />
+              </p>
+              <Text style={textStyles} variant="large">Week 03/28/2021 to 04/03/2021</Text>
             </div>
             <Stack>
             <Stack.Item align="center">
@@ -87,7 +106,11 @@ const textStyles = {
                     </Stack.Item>
                     <Stack.Item align="auto" styles={stackItemStyles}>
                     <Text style ={{ paddingLeft: '12px', fontWeight: 'bold'}} variant="large">Notes</Text>
-                      <ChowNotes />
+                    <span style={{ paddingLeft: '5px'}}>
+                      <Icon onClick={() => setSaveRender(true)} iconName="Edit"/>
+                    </span>
+                    {renderSave()}
+                    <ChowNotes />
                     </Stack.Item>
                 </Stack>
               </div>
@@ -99,16 +122,16 @@ const textStyles = {
     else {
       return (
         <div style={selectWeekStyles}>
-            <Text style={textStyles} variant="xLarge">CHOW TIME</Text>
-            <Stack style={textStyles}>
-              <Dropdown
-                placeholder="Select an option"
-                label="Select Week"
-                options={options}
-                styles={dropdownStyles}
-                onChange={onWeekClick}
-              />
-            </Stack>
+          <Text style={chowTextStyles} variant="xLarge">CHOW TIME</Text>
+          <p style={textStyles}>
+            <Dropdown
+              placeholder="Select an option"
+              label="Select Week"
+              options={options}
+              styles={dropdownStyles}
+              onChange={onWeekClick}
+            />
+          </p>
         </div>
       );
     }

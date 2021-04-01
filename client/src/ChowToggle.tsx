@@ -16,13 +16,13 @@ export const ChowToggle = () => {
     return (
         <div>
           <Stack styles={stackStyles} tokens={verticalGapStackTokens}>
-            <span style ={{ paddingBottom: '5px'}}><Toggle onText="Yes" offText="No"/></span>
-            <span style ={{ paddingBottom: '5px'}}><Toggle onText="Yes" offText="No"/></span>
-            <span style ={{ paddingBottom: '5px'}}><Toggle onText="Yes" offText="No"/></span>
-            <span style ={{ paddingBottom: '5px'}}><Toggle onText="Yes" offText="No"/></span>
-            <span style ={{ paddingBottom: '5px'}}><Toggle onText="Yes" offText="No"/></span>
-            <span style ={{ paddingBottom: '5px'}}><Toggle onText="Yes" offText="No"/></span>
-            <span style ={{ paddingBottom: '5px'}}><Toggle onText="Yes" offText="No"/></span>
+            <span style ={{ paddingTop: '5px'}}><Toggle defaultChecked onText="Yes" offText="No"/></span>
+            <span style ={{ paddingTop: '5px'}}><Toggle defaultChecked onText="Yes" offText="No"/></span>
+            <span style ={{ paddingTop: '5px'}}><Toggle defaultChecked onText="Yes" offText="No"/></span>
+            <span style ={{ paddingTop: '5px'}}><Toggle onText="Yes" offText="No"/></span>
+            <span style ={{ paddingTop: '5px'}}><Toggle onText="Yes" offText="No"/></span>
+            <span style ={{ paddingTop: '5px'}}><Toggle onText="Yes" offText="No"/></span>
+            <span style ={{ paddingTop: '5px'}}><Toggle onText="Yes" offText="No"/></span>
           </Stack>
         </div>
     )

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ChoiceGroup, IChoiceGroupOption, TextField, getTheme, Stack, IStackStyles, IStackTokens, IStackItemStyles, DefaultPalette, Text, Icon } from '@fluentui/react';
+import { ChoiceGroup, IChoiceGroupOption, TextField, getTheme, Stack, IStackStyles, IStackTokens, IStackItemStyles, DefaultPalette, Text, DefaultButton, IIconProps} from '@fluentui/react';
 
 const theme = getTheme();
 
@@ -43,6 +43,8 @@ const options: IChoiceGroupOption[] = [
     { key: 'B', text: 'Medium' },
     { key: 'C', text: 'Severe' },
   ];
+  const addIcon: IIconProps = { iconName: 'Add' };
+
   
   export const Allergies: React.FC = () => {
   
@@ -52,12 +54,14 @@ const options: IChoiceGroupOption[] = [
             <div style={nextDivStyles}>
               <Stack.Item align="center" grow={2} styles={stackItemStyles}>
                 <Text variant="xLarge">ALLERGIES</Text>
-                <span style={{ paddingLeft: '5px'}}>
-                    <Icon iconName="Edit"/>
-                </span>
               </Stack.Item>
               <TextField label="Allergy:" placeholder="Chicken, Cucumbers"/>
               <ChoiceGroup defaultSelectedKey="A" options={options} label="Severity"/>
+              <p style={{paddingTop: '10px'}}>
+              <DefaultButton
+                text="Add Allergy"
+                iconProps={addIcon} />
+              </p>
             </div>
           </Stack.Item>
       </Stack>

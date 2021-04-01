@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Day } from './Date'
-import { Dropdown, IDropdownOption, IDropdownStyles, ChoiceGroup, IChoiceGroupOption, TextField, Toggle, Text, DefaultPalette, Stack, IStackStyles, IStackTokens, IStackItemStyles, getTheme, Icon } from '@fluentui/react';
+import { Dropdown, DefaultButton, IIconProps, IDropdownOption, IDropdownStyles, ChoiceGroup, IChoiceGroupOption, TextField, Toggle, Text, DefaultPalette, Stack, IStackStyles, IStackTokens, IStackItemStyles, getTheme } from '@fluentui/react';
 
 // Styles definition
 const stackStyles: IStackStyles = {
@@ -75,6 +75,7 @@ const stackStyles: IStackStyles = {
         { key: 'B', text: 'Normal' },
         { key: 'C', text: 'A lot' },
       ];
+    const addIcon: IIconProps = { iconName: 'Edit' };
   
   
     return (
@@ -111,14 +112,15 @@ const stackStyles: IStackStyles = {
                     <Toggle onText="Oops! This was an accident." offText="This was not an accident."/>
                 </Stack.Item>
                 <Stack.Item grow={2} styles={stackItemStyles}>
-                  <Icon iconName="Edit"/>
+                  <DefaultButton
+                    text="Edit"
+                    iconProps={addIcon} />
                 </Stack.Item>
             </Stack>
             </div>
         </Stack.Item>
         </Stack>
-        <Text style={textStyles} variant="small">Yesterday, 03/31/2021</Text>
-        <hr />
+        
         <Stack styles={stackStyles} tokens={itemAlignmentsStackTokens}>
         <Stack.Item align="center" styles={mainStackItemStyles}>
             <div style={mainDivStyles}>
@@ -149,13 +151,16 @@ const stackStyles: IStackStyles = {
                   <Toggle onText="Oops! This was an accident." offText="This was not an accident."/>
                 </Stack.Item>
                 <Stack.Item grow={2} styles={stackItemStyles}>
-                  <Icon iconName="Edit"/>
+                  <DefaultButton
+                    text="Edit"
+                    iconProps={addIcon} />
                 </Stack.Item>
             </Stack>
             </div>
         </Stack.Item>
         </Stack>
-
+        <Text style={textStyles} variant="small">Yesterday, 03/31/2021</Text>
+        <hr />
         <Stack styles={stackStyles} tokens={itemAlignmentsStackTokens}>
         <Stack.Item align="center" styles={mainStackItemStyles}>
             <div style={mainDivStyles}>
@@ -186,7 +191,9 @@ const stackStyles: IStackStyles = {
                     <Toggle onText="Oops! This was an accident." offText="This was not an accident."/>
                 </Stack.Item>
                 <Stack.Item grow={2} styles={stackItemStyles}>
-                  <Icon iconName="Edit"/>
+                  <DefaultButton
+                    text="Edit"
+                    iconProps={addIcon} />
                 </Stack.Item>
             </Stack>
             </div>

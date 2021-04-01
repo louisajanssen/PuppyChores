@@ -1,5 +1,5 @@
 import * as React from "react";
-import { TextField, getTheme, Stack, IStackStyles, IStackTokens, IStackItemStyles, DefaultPalette, Text, Icon } from '@fluentui/react';
+import { TextField, getTheme, Stack, IStackStyles, IStackTokens, IStackItemStyles, DefaultPalette, Text, DefaultButton, IIconProps } from '@fluentui/react';
 
 const theme = getTheme();
 
@@ -39,6 +39,7 @@ const mainDivStyles = {
   padding: 25,
   align: 'center'
 }
+const editIcon: IIconProps = {iconName: 'Edit'}
 
 
   
@@ -50,9 +51,6 @@ const mainDivStyles = {
           <div style={mainDivStyles}>
             <Stack.Item grow={2} styles={stackItemStyles}>
               <Text variant="xLarge">VACCINATION RECORD</Text>
-                <span style={{ paddingLeft: '5px'}}>
-                  <Icon iconName="Edit"/>
-                </span>
             </Stack.Item>
             <TextField label="Distemper:" placeholder="12/22/2017"/>
             <TextField label="Parvovirus:" placeholder="12/22/2017"/>
@@ -60,6 +58,11 @@ const mainDivStyles = {
             <TextField label="Rabies:" placeholder="2/14/2019"/>
             <TextField label="Bordetella:" placeholder="10/26/2020"/>
             <TextField label="DHLPP:" placeholder="10/26/2020"/>
+            <p style={{paddingTop: '10px'}}>
+              <DefaultButton
+                text="Edit"
+                iconProps={editIcon} />
+            </p>
           </div>
           </Stack.Item>
       </Stack>

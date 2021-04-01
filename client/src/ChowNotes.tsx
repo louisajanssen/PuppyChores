@@ -17,8 +17,8 @@ export const ChowNotes = () => {
         <div>
           <Stack styles={stackStyles} tokens={verticalGapStackTokens}>
               <TextField style={{width: '500px'}} />
-              <TextField />
-              <TextField />
+              <TextField placeholder="Added pumpkin puree to food today."/>
+              <TextField placeholder="Didn't seem to have an appetite in the evening. Might need to check with vet."/>
               <TextField />
               <TextField />
               <TextField />
