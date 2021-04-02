@@ -66,7 +66,7 @@ const chowTextStyles = {
 
     const renderSave = () => {
       if (saveRender === true) {
-        return <span style={{paddingLeft: '10px'}}><Icon onClick={() => setSaveRender(false)} iconName="save" /></span>
+        return <span style={{paddingLeft: '10px', cursor: 'pointer'}}><Icon onClick={() => setSaveRender(false)} iconName="save" /></span>
       }
       else {
         return
@@ -106,7 +106,7 @@ const chowTextStyles = {
                     </Stack.Item>
                     <Stack.Item align="auto" styles={stackItemStyles}>
                     <Text style ={{ paddingLeft: '12px', fontWeight: 'bold'}} variant="large">Notes</Text>
-                    <span style={{ paddingLeft: '5px'}}>
+                    <span style={{ paddingLeft: '5px', cursor: 'pointer'}}>
                       <Icon onClick={() => setSaveRender(true)} iconName="Edit"/>
                     </span>
                     {renderSave()}

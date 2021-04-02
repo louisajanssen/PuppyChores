@@ -1,5 +1,5 @@
 import * as React from "react";
-import { TextField, getTheme, Stack, IStackStyles, IStackTokens, IStackItemStyles, DefaultPalette, Text } from '@fluentui/react';
+import { TextField, getTheme, Stack, IStackStyles, IStackTokens, IStackItemStyles, DefaultPalette, Text, DefaultButton, IIconProps } from '@fluentui/react';
 
 const theme = getTheme();
 
@@ -56,6 +56,7 @@ const styledImg = {
 const textStyles = {
   color: '#073920'
 }
+const editIcon: IIconProps = {iconName: 'Edit'}
   
   export const GeneralInfo: React.FC = () => {
   
@@ -74,6 +75,11 @@ const textStyles = {
             <TextField label="Food:" placeholder="Royal Canine"/>
             <TextField label="Favorite Treats:" placeholder="Carrot, Salmon, Cheese"/>
             <TextField label="Vet:" placeholder="Eastside Vet Associates"/>
+            <p style={{paddingTop: '10px'}}>
+              <DefaultButton
+                text="Edit"
+                iconProps={editIcon} />
+            </p>
           </div>
           </Stack.Item>
         </Stack>

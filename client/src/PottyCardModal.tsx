@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Day } from './Date'
-import { Icon, Dropdown, IDropdownOption, IDropdownStyles, ChoiceGroup, IChoiceGroupOption, TextField, Toggle, Text, DefaultPalette, Stack, IStackStyles, IStackTokens, IStackItemStyles, getTheme } from '@fluentui/react';
+import { Dropdown, IDropdownOption, IDropdownStyles, ChoiceGroup, IChoiceGroupOption, TextField, Toggle, Text, DefaultPalette, Stack, IStackStyles, IStackTokens, IStackItemStyles, getTheme, DefaultButton, IIconProps } from '@fluentui/react';
 
 // Styles definition
 const stackStyles: IStackStyles = {
@@ -52,6 +52,7 @@ const stackStyles: IStackStyles = {
     childrenGap: 5,
     padding: 10,
   };
+  const saveIcon: IIconProps = {iconName: 'Save'}
   
   export const PottyCardModal: React.FC = () => {
 
@@ -99,7 +100,11 @@ const stackStyles: IStackStyles = {
                     <Toggle onText="Oops! This was an accident." offText="This was not an accident."/>
                 </Stack.Item>
                 <Stack.Item grow={2} styles={stackItemStyles}>
-                  <Icon style={{width: '50px'}} iconName="Save"/>
+                <p style={{paddingTop: '10px'}}>
+                  <DefaultButton
+                    text="Save"
+                    iconProps={saveIcon} />
+                </p>
                 </Stack.Item>
             </Stack>
             </div>
