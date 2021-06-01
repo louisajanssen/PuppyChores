@@ -147,7 +147,6 @@ const cancelIcon: IIconProps = { iconName: 'Cancel' };
               </Modal>
           </div>
         </div>
-        
       );
     }
     else {
@@ -168,7 +167,7 @@ const cancelIcon: IIconProps = { iconName: 'Cancel' };
     }
   }
 
-  const theme = getTheme();
+const theme = getTheme();
 const contentStyles = mergeStyleSets({
   container: {
     display: 'flex',
