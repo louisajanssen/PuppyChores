@@ -56,7 +56,7 @@ const options: IChoiceGroupOption[] = [
                 <Text variant="xLarge">ALLERGIES</Text>
               </Stack.Item>
               <TextField label="Allergy:" placeholder="Chicken"/>
-              <ChoiceGroup defaultSelectedKey="A" options={options} label="Severity"/>
+              <ChoiceGroup defaultSelectedKey="B" options={options} label="Severity"/>
               <p style={{paddingTop: '10px'}}>
               <DefaultButton
                 text="Add Allergy"

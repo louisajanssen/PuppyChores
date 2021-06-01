@@ -1,5 +1,5 @@
 import * as React from "react";
-import { TextField, getTheme, Stack, IStackStyles, IStackTokens, IStackItemStyles, DefaultPalette, Text, DefaultButton, IIconProps } from '@fluentui/react';
+import { getTheme, Stack, IStackStyles, IStackTokens, IStackItemStyles, DefaultPalette, Text, DefaultButton, IIconProps } from '@fluentui/react';
 
 const theme = getTheme();
 
@@ -70,11 +70,26 @@ const editIcon: IIconProps = {iconName: 'Edit'}
             <Stack.Item align="center" grow={2} styles={stackItemStyles}>
               <Text variant="xLarge" style={textStyles} >MIKO | 3 years old</Text>
             </Stack.Item>
-            <TextField label="Breed:" placeholder="Mini Australian Shepherd"/>
-            <TextField label="Birthday:" placeholder="10/27/17"/>
-            <TextField label="Food:" placeholder="Royal Canine"/>
-            <TextField label="Favorite Treats:" placeholder="Carrot, Salmon, Cheese"/>
-            <TextField label="Vet:" placeholder="Eastside Vet Associates"/>
+            <p className="generalInfoMainP">
+              <span className="generalInfoCategory">Breed:</span>
+              <span className="generalInfoText">Mini Australian Shepherd</span>
+            </p>
+            <p className="generalInfoMainP">
+              <span className="generalInfoCategory">Birthday:</span>
+              <span className="generalInfoText">10/27/2017</span>
+            </p>
+            <p className="generalInfoMainP">
+              <span className="generalInfoCategory">Food:</span>
+              <span className="generalInfoText">Royal Canine</span>
+            </p>
+            <p className="generalInfoMainP">
+              <span className="generalInfoCategory">Favorite Treats:</span>
+              <span className="generalInfoText">Carrot, Salmon, Cheese</span>
+            </p>
+            <p className="generalInfoMainP">
+              <span className="generalInfoCategory">Vet Info:</span>
+              <span className="generalInfoText">Eastside Vet Associates</span>
+            </p>
             <p style={{paddingTop: '10px'}}>
               <DefaultButton
                 text="Edit"
