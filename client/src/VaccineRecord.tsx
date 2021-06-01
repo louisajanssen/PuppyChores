@@ -59,12 +59,18 @@ const cancelIcon: IIconProps = { iconName: 'Cancel' };
             <Stack.Item grow={2} styles={stackItemStyles}>
               <Text variant="xLarge">VACCINATION RECORD</Text>
             </Stack.Item>
-            <TextField label="Distemper:" placeholder="12/22/2017"/>
-            <TextField label="Parvovirus:" placeholder="12/22/2017"/>
-            <TextField label="Adenovirus:" placeholder="12/22/2017"/>
-            <TextField label="Rabies:" placeholder="2/14/2019"/>
-            <TextField label="Bordetella:" placeholder="10/26/2020"/>
-            <TextField label="DHLPP:" placeholder="10/26/2020"/>
+                <p className="category">Distemper:</p>
+                <p className="textOutline">12/22/2017</p>
+                <p className="category">Parvovirus:</p>
+                <p className="textOutline">12/22/2017</p>
+                <p className="category">Adenovirus:</p>
+                <p className="textOutline">12/22/2017</p>
+                <p className="category">Rabies:</p>
+                <p className="textOutline">2/14/2019</p>
+                <p className="category">Bordetella:</p>
+                <p className="textOutline">10/26/2020</p>
+                <p className="category">DHLPP:</p>
+                <p className="textOutline">10/26/2020</p>
             <p style={{paddingTop: '10px'}}>
               <DefaultButton
                 text="Edit"

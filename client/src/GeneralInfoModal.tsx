@@ -1,22 +1,12 @@
 import * as React from "react";
 import { TextField, DefaultPalette, getTheme, Stack, IStackStyles, IStackTokens, IStackItemStyles, DefaultButton, IIconProps } from '@fluentui/react';
 
-// Styles definition
 const stackStyles: IStackStyles = {
     root: {
       background: DefaultPalette.white,
     },
   };
-//   const stackItemStyles: IStackItemStyles = {
-//     root: {
-//       alignItems: 'center',
-//       background: DefaultPalette.white,
-//       color: DefaultPalette.black,
-//       display: 'flex',
-//       height: 50,
-//       justifyContent: 'center',
-//     },
-//   };
+
   const mainStackItemStyles: IStackItemStyles ={
     root: {
         background: DefaultPalette.white,

@@ -82,24 +82,24 @@ const cancelIcon: IIconProps = { iconName: 'Cancel' };
             </Stack.Item>
             <div style={genDivStyles}>
               <p className="generalInfoMainP">
-                <span className="generalInfoCategory">Breed:</span>
-                <span className="generalInfoText">Mini Australian Shepherd</span>
+                <span className="category">Breed:</span>
+                <span className="textOutline">Mini Australian Shepherd</span>
               </p>
               <p className="generalInfoMainP">
-                <span className="generalInfoCategory">Birthday:</span>
-                <span className="generalInfoText">10/27/2017</span>
+                <span className="category">Birthday:</span>
+                <span className="textOutline">10/27/2017</span>
               </p>
               <p className="generalInfoMainP">
-                <span className="generalInfoCategory">Food:</span>
-                <span className="generalInfoText">Royal Canine</span>
+                <span className="category">Food:</span>
+                <span className="textOutline">Royal Canine</span>
               </p>
               <p className="generalInfoMainP">
-                <span className="generalInfoCategory">Favorite Treats:</span>
-                <span className="generalInfoText">Carrot, Salmon, Cheese</span>
+                <span className="category">Favorite Treats:</span>
+                <span className="textOutline">Carrot, Salmon, Cheese</span>
               </p>
               <p className="generalInfoMainP">
-                <span className="generalInfoCategory">Vet Info:</span>
-                <span className="generalInfoText">Eastside Vet Associates</span>
+                <span className="category">Vet Info:</span>
+                <span className="textOutline">Eastside Vet Associates</span>
               </p>
               <p style={{paddingTop: '10px'}}>
                 <DefaultButton
