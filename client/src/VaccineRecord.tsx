@@ -1,7 +1,6 @@
 import * as React from "react";
 import { useBoolean } from '@fluentui/react-hooks';
-
-import { TextField, getTheme, Stack, Modal, FontWeights, mergeStyleSets, IconButton, IStackStyles, IStackTokens, IStackItemStyles, DefaultPalette, Text, DefaultButton, IIconProps } from '@fluentui/react';
+import { getTheme, Stack, Modal, FontWeights, mergeStyleSets, IconButton, IStackStyles, IStackTokens, IStackItemStyles, DefaultPalette, Text, DefaultButton, IIconProps } from '@fluentui/react';
 import { VaccinationModal } from "./VaccinationModal";
 
 const theme = getTheme();
