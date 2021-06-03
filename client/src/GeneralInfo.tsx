@@ -8,7 +8,7 @@ const theme = getTheme();
 const stackStyles: IStackStyles = {
   root: {
     background: DefaultPalette.white,
-    paddingTop: 80,
+    paddingTop: 30,
     align: "center",
   },
 };
@@ -32,7 +32,7 @@ const mainStackItemStyles: IStackItemStyles ={
   root: {
       background: DefaultPalette.white,
       color: DefaultPalette.black,
-      padding: 5,
+      padding: 2,
     },
 }
 // const stackTokens: IStackTokens = {
@@ -81,26 +81,16 @@ const cancelIcon: IIconProps = { iconName: 'Cancel' };
               <Text variant="xLarge" style={textStyles} >MIKO | 3 years old</Text>
             </Stack.Item>
             <div style={genDivStyles}>
-              <p className="generalInfoMainP">
-                <span className="category">Breed:</span>
-                <span className="textOutline">Mini Australian Shepherd</span>
-              </p>
-              <p className="generalInfoMainP">
-                <span className="category">Birthday:</span>
-                <span className="textOutline">10/27/2017</span>
-              </p>
-              <p className="generalInfoMainP">
-                <span className="category">Food:</span>
-                <span className="textOutline">Royal Canine</span>
-              </p>
-              <p className="generalInfoMainP">
-                <span className="category">Favorite Treats:</span>
-                <span className="textOutline">Carrot, Salmon, Cheese</span>
-              </p>
-              <p className="generalInfoMainP">
-                <span className="category">Vet Info:</span>
-                <span className="textOutline">Eastside Vet Associates</span>
-              </p>
+              <p className="category">Breed:</p>
+              <p className="textOutline">Mini Australian Shepherd</p>
+              <p className="category">Birthday:</p>
+              <p className="textOutline">10/27/2017</p>
+              <p className="category">Food:</p>
+              <p className="textOutline">Royal Canine</p>
+              <p className="category">Favorite Treats:</p>
+              <p className="textOutline">Carrot, Salmon, Cheese</p>
+              <p className="category">Vet Info:</p>
+              <p className="textOutline">Eastside Vet Associates</p>
               <p style={{paddingTop: '10px'}}>
                 <DefaultButton
                   text="Edit"
