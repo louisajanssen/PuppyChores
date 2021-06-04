@@ -35,10 +35,7 @@ const mainStackItemStyles: IStackItemStyles ={
       padding: 2,
     },
 }
-// const stackTokens: IStackTokens = {
-//   childrenGap: 5,
-//   padding: 10,
-// };
+
 const itemAlignmentsStackTokens: IStackTokens = {
   childrenGap: 5,
   padding: 10,

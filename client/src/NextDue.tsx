@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useBoolean } from '@fluentui/react-hooks';
-import { TextField, Modal, getTheme, mergeStyleSets, FontWeights, IconButton, Stack, IStackStyles, IStackTokens, IStackItemStyles, DefaultPalette, Text, Toggle, DefaultButton, IIconProps } from '@fluentui/react';
+import { Modal, getTheme, mergeStyleSets, FontWeights, IconButton, Stack, IStackStyles, IStackTokens, IStackItemStyles, DefaultPalette, Text, Toggle, DefaultButton, IIconProps } from '@fluentui/react';
 import { NextDueModal } from "./NextDueModal";
 
 const theme = getTheme();
@@ -54,9 +54,12 @@ const cancelIcon: IIconProps = { iconName: 'Cancel' };
               <Stack.Item align="center" grow={2} styles={stackItemStyles}>
                 <Text variant="xLarge">NEXT DUE</Text>
               </Stack.Item>
-              <TextField label="Rabies:" placeholder="02/13/2022"/>
-              <TextField label="Bordetella:" placeholder="10/25/2021"/>
-              <TextField label="DHLPP:" placeholder="10/25/2021"/>
+              <p className="category">Rabies:</p>
+              <p className="textOutline">2/13/2022</p>
+              <p className="category">Bordetella:</p>
+              <p className="textOutline">10/25/2021</p>
+              <p className="category">DHLPP:</p>
+              <p className="textOutline">10/25/2021</p>
               <Stack horizontal styles={stackStyles} tokens={itemAlignmentsStackTokens}>
                 <p style={{ paddingTop: '20px'}}>
                   <Stack.Item grow={2} styles={stackItemStyles}>
